@@ -1,0 +1,14 @@
+name,email,phone,city
+Ali Khan,ali.khan@example.com,0300-1234567,Karachi
+Sara Ahmed,sara.ahmed@example.com,03111234567,Lahore
+Ali Khan,ali.khan@example.com,0300-1234567,Karachi
+ALI  KHAN,Ali.Khan@Example.com,+92 300 1234567,karachi
+Bilal Raza,bilal.raza@gmail.com,03211112222,Islamabad
+Bilal Raza,bilal.raza+shop@gmail.com,0321-1112222,Islamabad
+Sara Ahmed,sara.a@example.com,03111234567,Lahore
+Hina Malik,hina@example.com,03451234567,Multan
+Zain Malik,zain@example.com,03451234567,Multan
+Ayesha Noor,ayesha.noor@example.com,03007654321,Karachi
+Ayesha Nur,ayesha.nur@example.com,03337654322,Karachi
+bad-email,notanemail,0300,Karachi
+Usman Tariq,usman@example.com,,
