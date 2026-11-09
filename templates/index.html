@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Redundancy Removal System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="top">
+    <h1>Data Redundancy Removal System</h1>
+    <p>Every record is validated, checked against existing data, and only unique or verified entries are stored.</p>
+  </header>
+
+  <main>
+    <section class="stats" id="stats" aria-label="Statistics"></section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Add a record</h2>
+        <div class="form">
+          <label>Name <input id="f-name" maxlength="80" autocomplete="off"></label>
+          <label>Email <input id="f-email" maxlength="120" autocomplete="off"></label>
+          <label>Phone (optional) <input id="f-phone" maxlength="30" autocomplete="off"></label>
+          <label>City (optional) <input id="f-city" maxlength="60" autocomplete="off"></label>
+          <button id="btn-add" class="primary">Check and add</button>
+        </div>
+        <div id="result" class="result" hidden role="status"></div>
+
+        <h2 class="sub">Bulk import</h2>
+        <div class="row">
+          <button id="btn-sample">Run sample data</button>
+          <label class="file">Upload CSV <input type="file" id="f-file" accept=".csv,text/csv" hidden></label>
+        </div>
+        <p class="hint">CSV columns: name, email, phone, city</p>
+        <p id="bulk-msg" class="hint" role="status"></p>
+      </section>
+
+      <section class="card wide">
+        <div class="tabs" role="tablist">
+          <button role="tab" id="tab-records" aria-selected="true">Stored records</button>
+          <button role="tab" id="tab-audit" aria-selected="false">Decision log</button>
+        </div>
+        <div class="table-wrap"><table id="table"></table></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
